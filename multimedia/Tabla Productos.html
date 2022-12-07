@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/EvaluacionJS/index.html#tienda -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Productos</title>
+    
+<link rel="stylesheet" href="./Tabla Productos_files/style.css"></head>
+<body>
+    
+    <header>
+        <nav class="navegacion">
+            <h1>Administración de artículos</h1>
+            <a class="navegacion__enlace navegacion__enlace--activo " href="http://127.0.0.1:5500/EvaluacionJS/index.html#tienda">Tienda</a>
+        </nav>
+        
+
+    </header>
+
+    <div id="tabla"><table border="1"> <tbody><tr> <td>Codigo</td> <td>Descripcion</td> <td>Precio</td><td> Borrrar </td><td>Seleccionar</td>  </tr><tr> <td>4</td> <td>rrr</td> <td>5</td><td> <button type="button" class="botonElimina" id="1" onclick="borrarValores(this.id)">Borrar?</button> </td> <td> <button type="button" id="1" onclick="seleccionaValores(this.id)">SELECCIONAR</button> </td>  </tr></tbody></table></div>
+
+    <div class="formulario">
+        <form action="http://127.0.0.1:5500/EvaluacionJS/index.html">
+            <p> Codigo : <input type="number" name="codigo" id="codigo"> </p>
+            <p>Descripcion : <input type="text" name="descripcion" id="descripcion"> </p>
+            <p>Precio : <input type="number" name="precio" id="precio"> </p>
+            <button type="button" onclick="designarValores()" class="botonSube">Agregar</button>
+            <button type="button" onclick="modificarValores()" class="botonSube">Modificar</button>
+        </form>
+        
+    <main class="contenedor" id="tienda">
+        <h1>Nuestros Productos</h1>
+        <div class="grid" id="productos"><div class="producto"> <a href="http://127.0.0.1:5500/EvaluacionJS/producto.html"><img class="producto__imagen" src="./Tabla Productos_files/1.jpg" alt="imagen rrr"><div class="producto__informacion"><p class="producto__nombre">rrr</p> <p class="producto__precio"> $5</p></div></a></div><!--.PRODUCTO--> <div class="grafico grafico--camisas"></div><div class="grafico grafico--node"></div></div><!--GRID-->
+    </main>
+
+    <script src="./Tabla Productos_files/app.js.descarga"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>

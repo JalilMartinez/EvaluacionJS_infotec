@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Productos</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navegacion">
+            <h1>Administración de artículos</h1>
+            <a class="navegacion__enlace navegacion__enlace--activo "href="#tienda">Tienda</a>
+        </nav>
+        
+    </header>
+
+    <div id="tabla">
+
+    </div>
+
+    <div class="formulario">
+        <form action="">
+            <p> Codigo : <input type="number" name = "codigo" id="codigo"> </p>
+            <p>Descripcion : <input type="text"  name = "descripcion" id="descripcion"> </p>
+            <p>Precio : <input type="number"  name = "precio" id="precio"> </p>
+            <button type="button" onclick="designarValores()" class="botonSube">Agregar</button>
+            <button type="button" onclick="modificarValores()" class="botonSube">Modificar</button>
+        </form>
+    </div>
+    
+    <main class="contenedor" id="tienda">
+        <h1>Nuestros Productos</h1>
+        <div class="grid" id="productos">
+
+            
+        </div><!--GRID-->
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
