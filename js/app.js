@@ -1,4 +1,5 @@
-class AdministradorArticulos{
+
+class AdministradorArticulos {
     codigo = 0;
     descripcion = '';
     precio = 0;
@@ -17,6 +18,7 @@ class AdministradorArticulos{
    }
 
    añadeElementosTabla(base){
+ 
     let tabla = document.getElementById("tabla");
     let contenido = '<table border = \'1\' > ';
     for (let i = 0; i < base.length; i++) {
@@ -38,6 +40,7 @@ class AdministradorArticulos{
     }
     contenido+='</table>';
     tabla.innerHTML=contenido;
+   
     this.actualizaTienda(base);
    }
 
@@ -81,6 +84,7 @@ let base=[
         precio : 'Precio',
 
     }];
+    
 
 const designarValores = () =>{//funciona cuando se oprime boton agregar
 
